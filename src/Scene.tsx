@@ -165,8 +165,16 @@ export const Foliage = () => {
   return (
     <points ref={mesh}>
       <bufferGeometry>
+        {/* 加上这一行忽略报错 */}
+        {/* @ts-ignore */}
         <bufferAttribute attach="attributes-position" count={count} array={data.tree.slice()} itemSize={3} />
+        
+        {/* 加上这一行忽略报错 */}
+        {/* @ts-ignore */}
         <bufferAttribute attach="attributes-color" count={count} array={data.col} itemSize={3} />
+        
+        {/* 加上这一行忽略报错 */}
+        {/* @ts-ignore */}
         <bufferAttribute attach="attributes-aScale" count={count} array={data.scale} itemSize={1} />
       </bufferGeometry>
       <shaderMaterial

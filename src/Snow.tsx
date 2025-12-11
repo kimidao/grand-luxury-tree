@@ -48,7 +48,9 @@ export const Snow = () => {
   return (
     <points ref={mesh}>
       <bufferGeometry>
+        {/* @ts-ignore */}
         <bufferAttribute attach="attributes-position" count={count} array={data.positions} itemSize={3} />
+        {/* @ts-ignore */}
         <bufferAttribute attach="attributes-aOpacity" count={count} array={data.opacity} itemSize={1} />
       </bufferGeometry>
       <shaderMaterial
