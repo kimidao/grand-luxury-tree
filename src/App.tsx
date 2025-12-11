@@ -54,7 +54,7 @@ export default function App() {
 
           <ContactShadows opacity={0.8} scale={30} blur={3} color="#000" />
 
-          <EffectComposer disableNormalPass>
+          <EffectComposer>
             <Bloom luminanceThreshold={0.8} intensity={2.0} mipmapBlur radius={0.5} />
             <Vignette darkness={1.2} offset={0.2} />
             <Noise opacity={0.05} />
